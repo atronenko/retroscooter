@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Unbounded:wght@200..900&display=swap');
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 200;
+    color: #1f1f1f;
+    background-color: #fbfbfb;
+    padding-top: 64px;
+}
+h1 {
+    font-size: 48px;
+    line-height: 125%;
+    font-weight: 600;
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+    background-color: rgb(250 200 11 / 70%);
+}
+h2 {
+    font-size: 44px;
+    line-height: 100%;
+    font-weight: 400;
+    margin: 0 0 24px 0;
+}
+h3 {
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+svg {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+header, footer, section {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+    background-color: #564351;
+    transition: background 0.3s;
+}
+.section-container, .header-container, .footer-container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1240px;
+    position: relative;
+}
+.section-container {
+    padding: 64px 20px;
+    flex-direction: column;
+}
+.rows {
+    gap: 24px;
+}
+.footer-container {
+    flex-direction: row;
+}
+.section-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-container {
+    gap: 24px;
+    padding: 20px;
+    color: #fbfbfb;
+    justify-content: space-between;
+}
+.footer-container a{
+    color: #ffcc00;
+    text-decoration: none;
+}
+.footer-container a:hover {
+    color: #fbfbfb;
+}
+.header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ffcc00;
+    padding: 20px;
+}
+.header-contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+.header-contacts-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.header-contacts-item svg {
+    stroke: #ffcc00;
+    stroke-opacity: 1;
+    stroke-width: 2.5;
+}
+.header-contacts-item a {
+    color: #fbfbfb;
+    text-decoration: none;
+    transition: all 3s;
+}
+.header-contacts a:hover {
+    text-decoration: underline;
+    transition: all 3s;
+}
+.lang-switch {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.lang-switch .divider {
+    font-weight: bold;
+    color: #fbfbfb;
+}
+.lang-switch a {
+    color: #fbfbfb;
+    text-decoration: none;
+}
+.lang-switch a:active {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+.lang-switch a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+.section-description {
+    box-sizing: border-box;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 24px 0;
+}
+.main {
+    height: 100vh;
+    max-height: 960px;
+}
+.main, .rental, .contacts {
+    background: url(../img/main-bg.png) right top / cover no-repeat;
+}
+.main-container {
+    justify-content: flex-end;
+    height: 100%;
+}
+.partner-badge {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    height: 160px;
+}
+.partner-badge img {
+    height: 100%;
+}
+.conditions-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "a b c c"
+    "d e c c"
+    "f g h h";
+}
+.a { 
+    grid-area: a; 
+}
+.b { 
+    grid-area: b; 
+}
+.c { 
+    grid-area: c; 
+    outline: none!important;
+    justify-content: center;
+}
+.d { 
+    grid-area: d; 
+}
+.e { 
+    grid-area: e; 
+}
+.f { 
+    grid-area: f; 
+}
+.g { 
+    grid-area: g; 
+}
+.h { 
+    grid-area: h; 
+    outline: none!important;
+}
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid rgb(211 211 211);
+    outline-offset: -0.5px;
+    padding: 20px;
+    gap: 8px;
+}
+.box p {
+    order: 1;
+}
+.box span {
+    font-weight: 400;
+}
+.conditions-item-icon {
+    position: static;
+    order: 2;
+}
+.conditions-item-icon svg {
+    stroke: #ffcc00;
+    stroke-opacity: 1;
+    stroke-width: 3;
+    width: 64px;
+    height: 64px;
+}
+.rental, .contacts {
+    position: relative;
+    color: #fbfbfb;
+}
+.overlay {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+    justify-content: center;
+}
+.overlay-gridline {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.gridline-item {
+    width: 1px;
+    height: 100%;
+    background-color: rgb(250 235 215 / 20%);
+}
+.rental-prices {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.rental-prices-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+}
+.rental-prices-item span {
+    font-weight: 400;
+}
+.callback-form, .input-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+.callback-form {
+    gap: 24px;
+}
+.input-item {
+    gap: 12px;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+input {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fbfbfb;
+    padding: 4px;
+    color:#fbfbfb
+}
+input:active, input:hover, input:focus {
+    background: transparent;
+    outline: none;
+}
+button {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #fdfdfd;
+    color: #fdfdfd;
+}
+button:hover {
+    background-color: #fbfbfb;
+    color: #1f1f1f;
+}
+input, button {
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 200;   
+}
+
+
+
+
+.contacts-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #fbfbfb;
+}
+.map {
+    width: 100%;
+    max-width: 800px;
+}
+.contacts-list {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    gap: 20px;
+}
+.map, .contacts-list {
+    outline: 1px solid rgb(211 211 211);
+    outline-offset: -1px;
+}
+.contacts-list a {
+    color: #fbfbfb;
+    text-decoration: none;
+    font-size: 18px;
+}
+.contacts-list a:hover {
+    color: #ffcc00;
+}
+.contacts-list svg {
+    stroke: #ffcc00;
+    stroke-opacity: 1;
+    stroke-width: 2.5;
+    width: 32px;
+    height: 32px;
+}
+.contacts-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+
+
+
+@media (max-width: 920px) {
+    .conditions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "a c"
+        "b c"
+        "d c"
+        "e h"
+        "f h"
+        "g h";
+    }
+    
+    .a, .b, .d, .e, .f, .g {
+        height: auto;
+    }
+    
+    .c {
+        grid-area: c;
+        height: auto;
+    }
+    
+    .h {
+        grid-area: h;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        padding: 32px 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .section-container {
+        padding: 48px 20px;
+    }
+
+    .header-contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .partner-badge {
+        height: 120px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .rental-prices {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .rental-prices-item {
+        width: calc(50% - 12px);
+        box-sizing: border-box;
+    }
+
+    form {
+        width: 100%;
+        flex-direction: column;
+    }
+    .callback-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+    }
+
+    .contacts-list {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    .overlay-gridline .gridline-item {
+        display: block;
+    }
+    .overlay-gridline .gridline-item:nth-child(n+4) {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+    h1 {
+        font-size: 32px;
+        padding: 24px 16px;
+    }
+
+    h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .header-contacts {
+        gap: 12px;
+        align-items: center;
+    }
+
+    .main {
+        height: auto;
+        max-height: none;
+    }
+
+    .main-container {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .partner-badge {
+        height: 100px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .conditions-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "b"
+        "d"
+        "e"
+        "f"
+        "g"
+        "c"
+        "h";
+    }
+    
+    .box {
+        padding: 16px;
+    }
+    
+    .conditions-item-icon {
+        display: none;
+    }
+    
+    .rental-prices-item {
+        padding: 16px;
+    }
+
+    .c img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+  
+/* Fade-in animation for scroll */
+.anim-on-scroll {
+    opacity: 0.2;
+    transform: translateY(120px);
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.anim-on-scroll.visible {
+    opacity: 1;
+    transform: none;
+}
+  
+.box.h {
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+a, button, .box, .footer-container a, .header-contacts-item a, .contacts-list a, .rental-prices-item {
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+  
